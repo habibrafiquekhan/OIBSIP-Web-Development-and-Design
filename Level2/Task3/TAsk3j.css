@@ -1,0 +1,339 @@
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #495057;
+    --card-bg: #ffffff;
+    --accent-low: #28a745;
+    --accent-medium: #ffc107;
+    --accent-high: #dc3545;
+    --btn-primary: #007bff;
+    --btn-secondary: #6c757d;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+    --font-family: 'Inter', sans-serif;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f8f9fa;
+    --card-bg: #2d2d2d;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#theme-toggle:focus {
+    outline: 2px solid var(--btn-primary);
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.left-panel {
+    display: flex;
+    justify-content: center;
+}
+
+.form-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-card h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-weight: 500;
+}
+
+input, textarea, select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--btn-primary);
+    border-color: var(--btn-primary);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background-color: var(--btn-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: var(--btn-secondary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+}
+
+.error {
+    color: var(--accent-high);
+    font-size: 0.9rem;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.task-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.task-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.task-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    border-left: 4px solid transparent;
+}
+
+.task-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.task-card.low {
+    border-left-color: var(--accent-low);
+}
+
+.task-card.medium {
+    border-left-color: var(--accent-medium);
+}
+
+.task-card.high {
+    border-left-color: var(--accent-high);
+}
+
+.task-card.due-soon {
+    border: 2px solid var(--accent-medium);
+}
+
+.task-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.task-description {
+    margin-bottom: 1rem;
+    color: #6c757d;
+}
+
+.task-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.priority-chip, .due-chip {
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.priority-chip.low {
+    background: var(--accent-low);
+    color: white;
+}
+
+.priority-chip.medium {
+    background: var(--accent-medium);
+    color: black;
+}
+
+.priority-chip.high {
+    background: var(--accent-high);
+    color: white;
+}
+
+.due-chip {
+    background: #e9ecef;
+    color: var(--text-color);
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.task-actions button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    max-width: 500px;
+    width: 90%;
+}
+
+.snackbar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    z-index: 1000;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--card-bg);
+    margin-top: 2rem;
+}
+
+#signature {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .task-sections {
+        grid-template-columns: 1fr;
+    }
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .form-card {
+        padding: 1.5rem;
+    }
+}

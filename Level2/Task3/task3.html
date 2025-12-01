@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <meta name="description" content="A clean, functional To-Do app for managing tasks with priorities, due dates, and search/filter features.">
+    <link rel="stylesheet" href="TAsk3j.css">
+</head>
+<body>
+    <header>
+        <h1>To-Do List</h1>
+        <button id="theme-toggle" aria-label="Toggle between dark and light theme">🌙</button>
+    </header>
+    
+    <main class="app-container">
+        <aside class="left-panel">
+            <div class="form-card">
+                <h2>Add New Task</h2>
+                <form id="task-form">
+                    <label for="task-title">Title *</label>
+                    <input type="text" id="task-title" placeholder="Enter task title" required aria-describedby="title-error">
+                    <div id="title-error" class="error" aria-live="polite"></div>
+                    
+                    <label for="task-description">Description *</label>
+                    <textarea id="task-description" placeholder="Enter task description" required aria-describedby="description-error"></textarea>
+                    <div id="description-error" class="error" aria-live="polite"></div>
+                    
+                    <label for="task-priority">Priority</label>
+                    <select id="task-priority" aria-label="Task priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    
+                    <label for="task-due-date">Due Date & Time</label>
+                    <input type="datetime-local" id="task-due-date" aria-label="Due date and time">
+                    
+                    <button type="submit" class="btn-primary">Add Task</button>
+                </form>
+            </div>
+        </aside>
+        
+        <section class="right-panel">
+            <div class="filters">
+                <input type="text" id="search-input" placeholder="Search tasks..." aria-label="Search tasks">
+                <select id="filter-priority" aria-label="Filter by priority">
+                    <option value="all">All Priorities</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <select id="sort-by" aria-label="Sort tasks">
+                    <option value="created">Sort by Created</option>
+                    <option value="due">Sort by Due Date</option>
+                    <option value="priority">Sort by Priority</option>
+                </select>
+                <button id="export-btn" class="btn-secondary" aria-label="Export tasks to JSON">Export</button>
+                <input type="file" id="import-input" accept=".json" style="display: none;">
+                <button id="import-btn" class="btn-secondary" aria-label="Import tasks from JSON">Import</button>
+            </div>
+            
+            <div class="task-sections">
+                <div class="task-section">
+                    <h2>Pending Tasks</h2>
+                    <div id="pending-tasks" class="task-list"></div>
+                </div>
+                <div class="task-section">
+                    <h2>Completed Tasks</h2>
+                    <div id="completed-tasks" class="task-list"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p id="signature">Built by <b>KHAN HABIB RAFIQUE</b></p>
+    </footer>
+    
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="edit-title">
+        <div class="modal-content">
+            <h2 id="edit-title">Edit Task</h2>
+            <form id="edit-form">
+                <label for="edit-task-title">Title *</label>
+                <input type="text" id="edit-task-title" placeholder="Enter task title" required aria-describedby="edit-title-error">
+                <div id="edit-title-error" class="error" aria-live="polite"></div>
+                
+                <label for="edit-task-description">Description *</label>
+                <textarea id="edit-task-description" placeholder="Enter task description" required aria-describedby="edit-description-error"></textarea>
+                <div id="edit-description-error" class="error" aria-live="polite"></div>
+                
+                <label for="edit-task-priority">Priority</label>
+                <select id="edit-task-priority" aria-label="Edit task priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                
+                <label for="edit-task-due-date">Due Date & Time</label>
+                <input type="datetime-local" id="edit-task-due-date" aria-label="Edit due date and time">
+                
+                <button type="submit" class="btn-primary">Save Changes</button>
+                <button type="button" id="cancel-edit" class="btn-secondary">Cancel</button>
+            </form>
+        </div>
+    </div>
+    
+    
+    <script src="tasjkk3.js"></script>
+</body>
+</html>
