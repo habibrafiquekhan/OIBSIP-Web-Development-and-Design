@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Auth System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Register</h1>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter username" required aria-describedby="usernameError">
+                    <span id="usernameError" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter email" required aria-describedby="emailError">
+                    <span id="emailError" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required aria-describedby="passwordError">
+                    <div id="passwordStrength" class="strength-meter"></div>
+                    <span id="passwordError" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="hint">Security Hint (e.g., favorite color for password recovery)</label>
+                    <input type="text" id="hint" placeholder="Enter your hint" required aria-describedby="hintError">
+                    <span id="hintError" class="error-message"></span>
+                </div>
+                <button type="submit" class="btn animate-btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+    <button id="themeToggle" class="theme-toggle">Toggle Dark Mode</button>
+    <p class="signature">Built by <b>KHAN HABIB RAFIQUE</b></p>
+    <script src="auth.js"></script>
+</body>
+</html>

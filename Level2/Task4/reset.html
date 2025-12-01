@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reset Password - Auth System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Reset Password</h1>
+            <div id="verifyStep">
+                <form id="verifyForm">
+                    <div class="form-group">
+                        <label for="resetEmail">Email</label>
+                        <input type="email" id="resetEmail" placeholder="Enter your email" required aria-describedby="verifyError">
+                        <span id="verifyError" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="resetHint">Security Hint (e.g., your favorite color)</label>
+                        <input type="text" id="resetHint" placeholder="Enter your hint" required aria-describedby="verifyHintError">
+                        <span id="verifyHintError" class="error-message"></span>
+                    </div>
+                    <button type="submit" class="btn animate-btn">Verify</button>
+                </form>
+            </div>
+            <div id="resetStep" style="display: none;">
+                <form id="newPasswordForm">
+                    <div class="form-group">
+                        <label for="newPassword">New Password</label>
+                        <input type="password" id="newPassword" placeholder="Enter new password" required aria-describedby="newPasswordError">
+                        <div id="newPasswordStrength" class="strength-meter"></div>
+                        <span id="newPasswordError" class="error-message"></span>
+                    </div>
+                    <button type="submit" class="btn animate-btn">Reset Password</button>
+                </form>
+            </div>
+            <p><a href="login.html">Back to Login</a></p>
+        </div>
+    </div>
+    <button id="themeToggle" class="theme-toggle">Toggle Dark Mode</button>
+    <p class="signature">Built by <b>KHAN HABIB RAFIQUE</b></p>
+    <script src="auth.js"></script>
+</body>
+</html>

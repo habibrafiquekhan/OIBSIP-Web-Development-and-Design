@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Auth System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginIdentifier">Username or Email</label>
+                    <input type="text" id="loginIdentifier" placeholder="Enter username or email" required aria-describedby="loginError">
+                    <span id="loginError" class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter password" required aria-describedby="loginPasswordError">
+                    <span id="loginPasswordError" class="error-message"></span>
+                </div>
+                <button type="submit" class="btn animate-btn">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+            <p><a href="reset.html">Forgot Password?</a></p>
+        </div>
+    </div>
+    <button id="themeToggle" class="theme-toggle">Toggle Dark Mode</button>
+    <footer><p class="signature">Built by <b>KHAN HABIB RAFIQUE</b></p></footer>
+    <script src="auth.js"></script>
+</body>
+</html>
