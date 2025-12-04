@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Albert Einstein: A Tribute to Genius</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Signature overlay -->
+    <div id="signature-overlay" class="signature-overlay" aria-hidden="true">
+        Built by <b>KHAN HABIB RAFIQUE</b>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#biography">Biography</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#quotes">Quotes</a></li>
+            </ul>
+
+            <button id="theme-toggle" aria-label="Toggle between dark and light theme">🌙</button>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Albert Einstein: A Tribute to Genius</h1>
+                <p class="hero-subtitle">The man who revolutionized our understanding of the universe.</p>
+
+                <blockquote class="hero-quote">
+                    <p>“Imagination is more important than knowledge.”</p>
+                    <cite>— Albert Einstein</cite>
+                </blockquote>
+            </div>
+
+            <picture class="hero-image">
+                <img src="main.jpg"
+                     alt="Portrait of Albert Einstein looking thoughtful with his signature wild hair."
+                     loading="lazy"
+                     data-modal-src="main.jpg"
+                     data-modal-alt="Albert Einstein portrait">
+            </picture>
+        </section>
+
+        <!-- TIMELINE -->
+        <section id="timeline" class="timeline">
+            <h2>Key Milestones in Einstein's Life</h2>
+
+            <div class="timeline-cards">
+                <article class="card">
+                    <h3>1879: Birth</h3>
+                    <p>Born in Ulm, Germany. Showed early curiosity in science and mathematics.</p>
+                </article>
+
+                <article class="card">
+                    <h3>1905: Miracle Year</h3>
+                    <p>Published four groundbreaking papers, including special relativity and E = mc².</p>
+                </article>
+
+                <article class="card">
+                    <h3>1915: General Relativity</h3>
+                    <p>Completed the theory of general relativity, reshaping our understanding of gravity.</p>
+                </article>
+
+                <article class="card">
+                    <h3>1921: Nobel Prize</h3>
+                    <p>Received the Nobel Prize for explaining the photoelectric effect.</p>
+                </article>
+
+                <article class="card">
+                    <h3>1955: Passing</h3>
+                    <p>Died in Princeton, USA, leaving a legacy that continues to shape modern science.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- BIOGRAPHY -->
+        <section id="biography" class="biography">
+            <h2>Biography</h2>
+
+            <p>
+                Albert Einstein (1879–1955) wasn’t just a theoretical physicist — he was a thinker
+                who reshaped how humanity understands the universe. From a curious child in Ulm to
+                a global icon, Einstein never stopped asking bold questions.
+            </p>
+
+            <p class="read-more">
+                At 26, he published papers that changed physics forever, including his famous
+                equation E = mc². His ideas on light, energy, and space earned him the 1921 Nobel Prize.
+            </p>
+
+            
+
+            <div id="bio-details" class="bio-details" hidden>
+                <p>
+                    In 1933, Einstein left Germany as Nazism rose and moved to the United States.
+                    At the Institute for Advanced Study in Princeton, he continued to contribute to science
+                    while becoming an influential voice on political and social issues.
+                </p>
+
+                <p>
+                    Beyond physics, Einstein loved music (he played the violin), enjoyed sailing,
+                    and kept a playful, curious spirit. He engaged publicly on civil rights and
+                    disarmament, using his platform to speak for humanitarian causes.
+                </p>
+
+                <p>
+                    Despite worldwide fame, he remained modest: “I have no special talent. I am only passionately curious.”
+                    His work still powers modern technology and shapes how scientists explore the universe.
+                </p>
+            </div>
+            <div class="read-more-container">
+                <button class="read-more-btn" aria-expanded="false" aria-controls="bio-details">Read more</button>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery" class="gallery">
+            <h2>Gallery</h2>
+
+            <div class="gallery-grid">
+                <img src="IMAGE1.png" loading="lazy" data-modal-src="IMAGE1.png" data-modal-alt="Einstein at his desk" alt="Einstein at his desk">
+                <img src="IMAGE2.jpg" loading="lazy" data-modal-src="IMAGE2.jpg" data-modal-alt="Einstein with colleagues" alt="Einstein with colleagues">
+                <img src="IMAGE3.jpg" loading="lazy" data-modal-src="IMAGE3.jpg" data-modal-alt="Einstein smiling" alt="Einstein smiling">
+                <img src="IMAGE4.jpg" loading="lazy" data-modal-src="IMAGE4.jpg" data-modal-alt="Einstein thoughtful" alt="Einstein thoughtful">
+                <img src="IMAGE5.jpg" loading="lazy" data-modal-src="IMAGE5.jpg" data-modal-alt="Einstein talking" alt="Einstein talking">
+                <img src="IMAGE6.jpg" loading="lazy" data-modal-src="IMAGE6.jpg" data-modal-alt="Einstein candid photo" alt="Einstein candid">
+                <img src="IMAGE7.jpg" loading="lazy" data-modal-src="Image7.jpg" data-modal-alt="Einstein with notes" alt="Einstein with notes">
+                <img src="IMAGE8.jpg" loading="lazy" data-modal-src="IMAGE8.jpg" data-modal-alt="Einstein at an event" alt="Einstein event">
+                <img src="IMAGE9.jpg" loading="lazy" data-modal-src="IMAGE9.jpg" data-modal-alt="Artistic Einstein portrait" alt="Artistic Einstein portrait">
+                <img src="IMAGE10.jpg" loading="lazy" data-modal-src="IMAGE10.jpg" data-modal-alt="Einstein portrait" alt="Einstein portrait">
+                <img src="IMAGE11.jpg" loading="lazy" data-modal-src="IMAGE11.jpg" data-modal-alt="Einstein portrait" alt="Einstein portrait">
+                <img src="IMAGE12.jpg" loading="lazy" data-modal-src="IMAGE12.jpg" data-modal-alt="Einstein portrait" alt="Einstein portrait">
+            </div>
+        </section>
+
+        <!-- QUOTES -->
+        <section id="quotes" class="quotes">
+            <h2>Famous Quotes</h2>
+
+            <blockquote>
+                <p>“The only source of knowledge is experience.”</p>
+                <cite>— Albert Einstein</cite>
+            </blockquote>
+
+            <blockquote>
+                <p>“Life is like riding a bicycle. To keep your balance, you must keep moving.”</p>
+                <cite>— Albert Einstein</cite>
+            </blockquote>
+
+            <blockquote>
+                <p>“I have no special talent. I am only passionately curious.”</p>
+                <cite>— Albert Einstein</cite>
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>Share this tribute: <button id="share-btn" aria-label="Share this page">📤 Share</button></p>
+
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Albert_Einstein" target="_blank" rel="noopener">Wikipedia</a></li>
+                <li><a href="https://www.einstein-website.de/" target="_blank" rel="noopener">Official Site</a></li>
+            </ul>
+
+            <p class="signature">Built by <b>KHAN HABIB RAFIQUE</b></p>
+            <p class="credits">Images sourced from public domain archives. Content for educational purposes.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" aria-hidden="true" role="dialog">
+        <button id="modal-close" aria-label="Close modal">×</button>
+        <img id="modal-image" src="" alt="">
+        <p id="modal-caption"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
